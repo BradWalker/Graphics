@@ -47,15 +47,15 @@
 class Primitive
 {
   public:
-    virtual void Dump(){cout << "Unknown primitive!";}
-    virtual bool TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector){cout << "TransformToEyeSpace():Unknown primitive!";}
+    virtual void Dump(){std::cout << "Unknown primitive!";}
+    virtual bool TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector){std::cout << "TransformToEyeSpace():Unknown primitive!";}
 
-    virtual void DoDice(MicroGrid &microgrid,int us,int vs){cout << "DoDice()::Unknown primitive!\n";}
+    virtual void DoDice(MicroGrid &microgrid,int us,int vs){std::cout << "DoDice()::Unknown primitive!\n";}
 
-    virtual bool Splitable(){cout << "Unknown primitive!"; return false;}
-    virtual void Split(list<Primitive*> &primlist){cout << "Split():Unknown primitive!";}
+    virtual bool Splitable(){std::cout << "Unknown primitive!"; return false;}
+    virtual void Split(std::list<Primitive*> &primlist){std::cout << "Split():Unknown primitive!";}
 
-    virtual bool EyeBound(BoundBox3 &bb){cout << "EyeBound():Unknown primitive!\n"; return false;}
+    virtual bool EyeBound(BoundBox3 &bb){std::cout << "EyeBound():Unknown primitive!\n"; return false;}
 
     void Dice(MicroGrid &microgrid,float xscale,float yscale);
     void EstimateGridSize(float xscale,float yscale,int &us,int &vs);

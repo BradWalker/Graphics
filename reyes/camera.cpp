@@ -71,10 +71,10 @@ Matrix4 Camera::WorldToEyeMatrix()
 //---------------------------------------
 void Camera::Dump()
 {
-  cout << "Position:" << position << " FieldOfView:" << FieldOfView << "\n";
-  cout << "U:" << u << "\n";
-  cout << "V:" << v << "\n";
-  cout << "D:" << d << "\n";
+  std::cout << "Position:" << position << " FieldOfView:" << FieldOfView << "\n";
+  std::cout << "U:" << u << "\n";
+  std::cout << "V:" << v << "\n";
+  std::cout << "D:" << d << "\n";
 }
 
 //=======================================

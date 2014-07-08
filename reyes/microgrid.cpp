@@ -158,42 +158,42 @@ ostream &operator<<(ostream &io,const MicroGrid &m)
 {
   int x,y;
 
-  cout << "Width: " << m.width << " Height: " << m.height << " (in micro-polygons)\n";
-  cout << "Points:\n";
+  std::cout << "Width: " << m.width << " Height: " << m.height << " (in micro-polygons)\n";
+  std::cout << "Points:\n";
   for(y=0;y<m.height+1;y++)
   {
     for(x=0;x<m.width+1;x++)
     {
-      cout << m.point[x][y] << " ";
+      std::cout << m.point[x][y] << " ";
     }
-    cout << "\n";
+    std::cout << "\n";
   }
-  cout << "Colours:\n";
+  std::cout << "Colours:\n";
   for(y=0;y<m.height;y++)
   {
     for(x=0;x<m.width;x++)
     {
-      cout << m.colour[x][y] << " ";
+      std::cout << m.colour[x][y] << " ";
     }
-    cout << "\n";
+    std::cout << "\n";
   }
-  cout << "Opacities:\n";
+  std::cout << "Opacities:\n";
   for(y=0;y<m.height;y++)
   {
     for(x=0;x<m.width;x++)
     {
-      cout << m.opacity[x][y] << " ";
+      std::cout << m.opacity[x][y] << " ";
     }
-    cout << "\n";
+    std::cout << "\n";
   }
-  cout << "Normals:\n";
+  std::cout << "Normals:\n";
   for(y=0;y<m.height;y++)
   {
     for(x=0;x<m.width;x++)
     {
-      cout << m.normal[x][y] << " ";
+      std::cout << m.normal[x][y] << " ";
     }
-    cout << "\n";
+    std::cout << "\n";
   }
 }
 
@@ -287,9 +287,9 @@ void MicroGrid::Shade(list<Light*> &lights)
   tWorldToEye=RiGlobal.tWorldToCamera;
   tEyeToWorld=tWorldToEye.Inverse();
 
-  // cout << "WorldToEye (same as dice?):\n" << tWorldToEye << "\n";
+  // std::cout << "WorldToEye (same as dice?):\n" << tWorldToEye << "\n";
 
-  // cout << "Identity ?\n" << tWorldToEye*tEyeToWorld << "\n";
+  // std::cout << "Identity ?\n" << tWorldToEye*tEyeToWorld << "\n";
 
   // Set resolution from microgrid size
   RiCurrent.shadingAttributes.resolution=(int)logn(2,width/(umax-umin));
@@ -301,8 +301,8 @@ void MicroGrid::Shade(list<Light*> &lights)
 
   if (RiGlobal.options.verbosity>0)
   {
-    cout << "Rendering microgrid (" << width << " x " << height << ")  ";
-    cout << "s=[" << umin << ":" << umax << "] t=[" << vmin << ":" << vmax << "]\n";
+    std::cout << "Rendering microgrid (" << width << " x " << height << ")  ";
+    std::cout << "s=[" << umin << ":" << umax << "] t=[" << vmin << ":" << vmax << "]\n";
   }
 
   diffu=(umax-umin);

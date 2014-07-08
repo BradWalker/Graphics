@@ -71,7 +71,7 @@ class MicroGrid
       {umin=_umin; vmin=_vmin; umax=_umax; vmax=_vmax;}
 
     void MicroGrid::ComputeNormals();
-    void MicroGrid::Shade(list<Light*> &lights);
+    void MicroGrid::Shade(std::list<Light*> &lights);
     void MicroGrid::Displace();
     void MicroGrid::Statistics(float &zmin,float &zmax,float &maxusize,float &maxvsize);
 

@@ -82,15 +82,15 @@ ostream &operator<<(ostream &io,const Polygon &p)
 
 void Polygon::Dump()
 {
-  cout << setprecision(2) << p[0];
-  cout << "-";
-  cout << setprecision(2) << p[1];
-  cout << "-";
-  cout << setprecision(2) << p[2];
-  cout << "-";
-  cout << setprecision(2) << p[3];
-  cout << "[" << smin << "," << tmin << "]";
-  cout << "-[" << smax << "," << tmax << "]";
+  std::cout << setprecision(2) << p[0];
+  std::cout << "-";
+  std::cout << setprecision(2) << p[1];
+  std::cout << "-";
+  std::cout << setprecision(2) << p[2];
+  std::cout << "-";
+  std::cout << setprecision(2) << p[3];
+  std::cout << "[" << smin << "," << tmin << "]";
+  std::cout << "-[" << smax << "," << tmax << "]";
 }
 
 //=======================================

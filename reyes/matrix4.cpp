@@ -127,13 +127,13 @@ ostream &operator<<(ostream &io,Matrix4 &m)
 
   for(i=0;i<4;i++)
   {
-    cout << "[";
+    std::cout << "[";
     for(j=0;j<4;j++)
     {
-      cout << m[i][j];
-      if (j<3) cout << " ";
+      std::cout << m[i][j];
+      if (j<3) std::cout << " ";
     }
-    cout << "]\n";
+    std::cout << "]\n";
   }
 }
 

@@ -50,7 +50,7 @@ ostream &operator<<(ostream &io,const Torus &s)
 
 void Torus::Dump()
 {
-  cout << *this;
+  std::cout << *this;
 }
 
 //=======================================

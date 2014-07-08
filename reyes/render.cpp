@@ -41,7 +41,7 @@ void GlobalState::RenderPrimitive(Primitive *prim)
     primitives.pop_front();
     if (RiGlobal.options.verbosity>0)
     {
-      cout << "Rendering: "; prim->Dump();
+      std::cout << "Rendering: "; prim->Dump();
     }
 
     /* Do dicing and rendering */

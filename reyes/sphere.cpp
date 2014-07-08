@@ -62,7 +62,7 @@ ostream &operator<<(ostream &io,const Sphere &s)
 
 void Sphere::Dump()
 {
-  cout << "Sphere " << radius << " " << zmin << " " << zmax << " " << arcmin << "-" << arcmax << "\n";
+  std::cout << "Sphere " << radius << " " << zmin << " " << zmax << " " << arcmin << "-" << arcmax << "\n";
 }
 
 //=======================================
