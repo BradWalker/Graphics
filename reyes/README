@@ -1,0 +1,5 @@
+This is a port of the Reyes rendering algorithm. The work was originally done by Adrian Skilling. But, it seems to have died as the links to the original source are no longer availabe. I was able to pull it out using the Internet Wayback machine. The code was suffereing from a little bit of bit rot.
+
+You can find numerous references to this code by doing a Google search using the terms "reyes adrian skilling".
+
+There was no license that was originally attached to the source code. So I've made it into a BSD license. This way, Adrian Skilling owns the copyright as he is the original auther. Yet, everyone can use it as they see fit. This seems like the proper thing to do as the GNU licenses have restrictions. But, the BSD license are true use as you wish. Seems like the proper intent for the source. Only the original author can tell me what he prefers.
