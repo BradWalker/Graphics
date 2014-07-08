@@ -43,7 +43,7 @@ class Colour
     Colour operator+=(Colour c){r+=c.r; g+=c.g; b+=c.b; return *this;}
     Colour operator*=(Colour c){r*=c.r; g*=c.g; b*=c.b; return *this;}
  
-    friend ostream &operator<<(ostream &io,const Colour &colour);
+    friend std::ostream &operator<<(std::ostream &io,const Colour &colour);
 
 };
 

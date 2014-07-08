@@ -40,7 +40,7 @@ class Cone: public Primitive
          float zmin=0,float zmax=1); // Constructor
 
     // Stream input/output
-    friend ostream &operator<<(ostream &io,const Cone &s);
+    friend std::ostream &operator<<(std::ostream &io,const Cone &s);
     void Dump();
 
     bool TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector);

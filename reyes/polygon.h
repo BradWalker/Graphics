@@ -41,7 +41,7 @@ class Polygon: public Primitive
     Polygon(Point3 p1,Point3 p2,Point3 p3,Point3 p4);
 
     // Stream input/output
-    friend ostream &operator<<(ostream &io,const Polygon &p);
+    friend std::ostream &operator<<(std::ostream &io,const Polygon &p);
     void Dump();
 
     bool TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector);

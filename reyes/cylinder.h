@@ -53,7 +53,7 @@ class Cylinder: public Primitive
              float tmin=0,float tmax=1); // Constructor
 
     // Stream input/output
-    friend ostream &operator<<(ostream &io,const Cylinder &s);
+    friend std::ostream &operator<<(std::ostream &io,const Cylinder &s);
     void Dump();
 
     bool TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector);

@@ -19,6 +19,7 @@
  *-----------------------------------------------------*/
 
 // C includes
+#include <string.h>
 #include <stdlib.h>
 
 // C++ includes
@@ -45,7 +46,7 @@ class Parameter
                              strcpy(data.string,_string);}
 
     // Stream input/output
-    friend ostream &operator<<(ostream &io,const Parameter &p);
+    friend std::ostream &operator<<(std::ostream &io,const Parameter &p);
 
     // Access to values
     int Int()

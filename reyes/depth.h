@@ -34,7 +34,7 @@ class Depth
     float ReadDepth(int x,int y);
 
     // IO stream operations
-    friend ostream &operator<<(ostream &io,const Depth &depth);
+    friend std::ostream &operator<<(std::ostream &io,const Depth &depth);
 
     // File output
     bool WriteAsPBM(char *filename);

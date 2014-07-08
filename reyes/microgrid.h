@@ -58,7 +58,7 @@ class MicroGrid
     void Free();
 
     // Stream input/output
-    friend ostream &operator<<(ostream &io,const MicroGrid &m);
+    friend std::ostream &operator<<(std::ostream &io,const MicroGrid &m);
     void WritePostscript(FILE *fp);
 
     bool ExtractMicroPolygon(MicroPolygon &m,int u,int v); // Extract micro-polygon from grid

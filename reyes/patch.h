@@ -52,7 +52,7 @@ class Patch: public Primitive
     void SetTextureCoords(float _smin,float _tmin,float _smax,float _tmax)
       {smin=_smin; tmin=_tmin; smax=_smax; tmax=_tmax;}
 
-    friend ostream &operator<<(ostream &io,const Patch &p);
+    friend std::ostream &operator<<(std::ostream &io,const Patch &p);
 
   private:
     Point3 control[4][4];

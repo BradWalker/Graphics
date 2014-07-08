@@ -45,7 +45,7 @@ class Disk: public Primitive
     Disk(float z=0,float radius=1,float arcmin=0,float arcmax=360,float tmin=0,float tmax=1); // Constructor
 
     // Stream input/output
-    friend ostream &operator<<(ostream &io,const Disk &s);
+    friend std::ostream &operator<<(std::ostream &io,const Disk &s);
     void Dump();
 
     bool TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector);

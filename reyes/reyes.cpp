@@ -128,7 +128,7 @@ int main(int argc,char *argv[])
   if (ribfile)
     ParseRIB(ribfile);
   else
-    cerr << "You must specify a RIB file to render. You turnip !\n";
+    std::cerr << "You must specify a RIB file to render. You turnip !\n";
 
   return EXIT_SUCCESS;
 }

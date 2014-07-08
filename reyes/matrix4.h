@@ -45,7 +45,7 @@ class Matrix4
     Matrix4 Inverse();
 
     // Stream input/output
-    friend ostream &operator<<(ostream &io,Matrix4 &m);
+    friend std::ostream &operator<<(std::ostream &io,Matrix4 &m);
     void writeBinary(FILE *fp);
     void readBinary(FILE *fp);
 

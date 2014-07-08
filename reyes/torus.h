@@ -52,7 +52,7 @@ class Torus: public Primitive
           float arcmin=0,float arcmax=360); // Constructor
 
     // Stream input/output
-    friend ostream &operator<<(ostream &io,const Torus &s);
+    friend std::ostream &operator<<(std::ostream &io,const Torus &s);
     void Dump();
 
     bool TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector);

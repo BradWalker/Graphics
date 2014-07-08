@@ -36,7 +36,7 @@ class BoundBox3
     friend BoundBox3 operator*(Matrix4 transform,BoundBox3 box);
 
     // Stream input/output
-    friend ostream &operator<<(ostream &io,const BoundBox3 &bbox);
+    friend std::ostream &operator<<(std::ostream &io,const BoundBox3 &bbox);
 
     void SortMinMax();              // Sort x,y,z min and max so min<max.
 

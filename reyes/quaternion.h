@@ -32,7 +32,7 @@ class Quaternion
     Matrix4 RotationMatrix();
 
     // Stream input/output
-    friend ostream &operator<<(ostream &io,const Quaternion &q);
+    friend std::ostream &operator<<(std::ostream &io,const Quaternion &q);
 
   private:
     float x,y,z,w;

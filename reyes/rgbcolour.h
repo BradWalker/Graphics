@@ -31,7 +31,7 @@ class RGBColour
       r(red),g(green),b(blue){}
 
     // Stream input/output
-    friend ostream &operator<<(ostream &io,const RGBColour &c);  
+    friend std::ostream &operator<<(std::ostream &io,const RGBColour &c);  
 
     unsigned char r,g,b;
 };

@@ -33,7 +33,7 @@ class Vector3
     Vector3(float x=0,float y=0,float z=0);
 
     // Stream input/output
-    friend ostream &operator<<(ostream &io,const Vector3 &v);
+    friend std::ostream &operator<<(std::ostream &io,const Vector3 &v);
 
     // Arithmetic operations
     friend Vector3 operator+(Vector3 a,Vector3 b);

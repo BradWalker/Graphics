@@ -303,8 +303,8 @@ class CurrentState
 ------------------------------------------------------*/
 GLOBAL GlobalState RiGlobal;
 GLOBAL CurrentState RiCurrent;
-GLOBAL list<Light*> lights;
-GLOBAL list<Light*> arealights;
+GLOBAL std::list<Light*> lights;
+GLOBAL std::list<Light*> arealights;
 
 /* Shader accessable variables */
 GLOBAL Point3 wP;

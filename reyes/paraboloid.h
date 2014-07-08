@@ -35,7 +35,7 @@ class Paraboloid: public Primitive
   public:
     Paraboloid(float rmax,float zmin,float zmax,float thetamin,
                float thetamax,float tmin=0,float tmax=1); // Constructor
-    friend ostream &operator<<(ostream &io,const Paraboloid &s);
+    friend std::ostream &operator<<(std::ostream &io,const Paraboloid &s);
     void Dump();
     bool TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector);
     void DoDice(MicroGrid &microgrid,int us,int vs);

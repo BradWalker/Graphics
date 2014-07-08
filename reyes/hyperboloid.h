@@ -36,7 +36,7 @@ class Hyperboloid: public Primitive
     Hyperboloid(Point3 point1,Point3 point2,float thetamin,float thetamax,float tmin=0,float tmax=1); // Constructor
 
     // Stream input/output
-    friend ostream &operator<<(ostream &io,const Hyperboloid &s);
+    friend std::ostream &operator<<(std::ostream &io,const Hyperboloid &s);
     void Dump();
 
     bool TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector);
