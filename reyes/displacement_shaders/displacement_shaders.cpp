@@ -11,7 +11,7 @@
 #include <stdlib.h>
 
 // C++ includes
-#include "iostream.h"
+#include  <iostream>
 
 // Reyes includes
 #include "displacement_shaders.h"

@@ -17,7 +17,7 @@
 #include "parameter.h"
 
 // C++ includes
-#include "iostream.h"
+#include  <iostream>
 
 ostream &operator<<(ostream &io,const Parameter &p)
 {

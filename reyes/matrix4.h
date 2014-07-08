@@ -28,7 +28,7 @@
 #include <stdio.h>
 
 // C++ includes
-#include "iostream.h"
+#include <iostream>
 
 // Reyes includes
 #include "vector3.h"
