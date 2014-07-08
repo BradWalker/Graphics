@@ -25,8 +25,8 @@
 #include "useful.h"
 
 // C++ includes
-#include  <iostream>
-#include "iomanip.h"
+#include <iostream>
+#include <iomanip>
 
 //=======================================
 // EstimateGridSize
