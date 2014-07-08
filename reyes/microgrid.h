@@ -70,10 +70,10 @@ class MicroGrid
     void SetTextureCoords(float _umin,float _vmin,float _umax,float _vmax)
       {umin=_umin; vmin=_vmin; umax=_umax; vmax=_vmax;}
 
-    void MicroGrid::ComputeNormals();
-    void MicroGrid::Shade(std::list<Light*> &lights);
-    void MicroGrid::Displace();
-    void MicroGrid::Statistics(float &zmin,float &zmax,float &maxusize,float &maxvsize);
+    void ComputeNormals();
+    void Shade(std::list<Light*> &lights);
+    void Displace();
+    void Statistics(float &zmin,float &zmax,float &maxusize,float &maxvsize);
 
     Point3 **point;                  // 2D array of points
     Colour **colour;                 // 2D array of micro-polygon colours
