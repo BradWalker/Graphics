@@ -33,7 +33,7 @@
 #include <stdlib.h>
 
 // Misc includes
-#include "list.h"
+#include <list>
 
 // Reyes includes
 #include "ri.h"

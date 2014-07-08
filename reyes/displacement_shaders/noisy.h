@@ -20,7 +20,7 @@
 #include "vector3.h"
 #include "point3.h"
 #include "displacement.h"
-#include "list.h"
+#include <list>
 #include "paramlist.h"
 
 class Noisy: public Displacement

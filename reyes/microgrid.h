@@ -38,7 +38,7 @@
 #include <iomanip>
 
 // Misc includes
-#include "list.h"
+#include <list>
 
 // Reyes includes
 #include "point3.h"

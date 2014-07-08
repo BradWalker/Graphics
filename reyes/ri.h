@@ -19,7 +19,7 @@
  *-----------------------------------------------------*/
 
 // C++ includes
-#include <list.h>
+#include <list>
 
 // C includes
 #include <limits.h>
