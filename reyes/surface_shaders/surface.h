@@ -1,5 +1,3 @@
-#ifndef surface_h
-#define surface_h
 /*------------------------------------------------------
  * TITLE:  surface.h
  * ENVIR:  RiscBSD
@@ -10,6 +8,10 @@
  * Initial revision
  *
  *-----------------------------------------------------*/
+#ifndef surface_h
+#define surface_h
+
+#include <iostream>
 
 // Reyes includes
 #include "paramlist.h"
@@ -23,10 +25,10 @@ class Surface
 {
   public:
     virtual void SurfaceColour(Point3 P,float s,float t,Vector3 N,Light *light,Colour &colour,Opacity &opacity)
-      {cerr << "No such surface\n";}
+      {std::cerr << "No such surface\n";}
 
     virtual void Dump()
-      {cerr << "No such surface\n";}
+      {std::cerr << "No such surface\n";}
 };
 
 #endif

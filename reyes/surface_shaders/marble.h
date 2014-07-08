@@ -1,5 +1,3 @@
-#ifndef marble_h
-#define marble_h
 /*------------------------------------------------------
  * TITLE:  marble.h
  * AUTHOR: Adrian Skilling
@@ -11,6 +9,10 @@
  * Initial revision
  *
  *-----------------------------------------------------*/
+#ifndef marble_h
+#define marble_h
+
+#include <iostream>
 
 // Reyes includes
 #include "surface.h"
@@ -36,7 +38,7 @@ class Marble: public Surface
      if (parameters.Exists("darkcolour"))     darkcolour=parameters.Vector("darkcolour");}
 
     void Dump()
-      {cout << "darkcolour=" << darkcolour << " Ka=" << Ka << " Kd=" << Kd << " Ks=" << Ks << " freq=" << freq << " roughness=" << roughness << "\n";}
+      {std::cout << "darkcolour=" << darkcolour << " Ka=" << Ka << " Kd=" << Kd << " Ks=" << Ks << " freq=" << freq << " roughness=" << roughness << "\n";}
 
     void SurfaceColour(Point3 P,        // Point in 3D eye/world/modelling space
                        float s,float t, // Surface texture co-ordinates

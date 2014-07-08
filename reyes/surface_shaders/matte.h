@@ -1,5 +1,3 @@
-#ifndef matte_h
-#define matte_h
 /*------------------------------------------------------
  * TITLE:  matte.h
  * AUTHOR: Adrian Skilling
@@ -14,6 +12,10 @@
  * Initial revision
  *
  *-----------------------------------------------------*/
+#ifndef matte_h
+#define matte_h
+
+#include <iostream>
 
 // Reyes includes
 #include "surface.h"
@@ -29,7 +31,7 @@ class Matte: public Surface
       {colour=_colour;}
 
     void Dump()
-      {cout << "Colour=" << colour << "\n";}
+      {std::cout << "Colour=" << colour << "\n";}
 
     void SurfaceColour(Point3 P,        // Point in 3D eye/world/modelling space
                        float s,float t, // Surface texture co-ordinates

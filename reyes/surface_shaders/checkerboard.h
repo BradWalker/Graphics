@@ -1,5 +1,3 @@
-#ifndef checkerboard_h
-#define checkerboard_h
 /*------------------------------------------------------
  * TITLE:  checkerboard.h
  * AUTHOR: Adrian Skilling
@@ -14,6 +12,10 @@
  * Initial revision
  *
  *-----------------------------------------------------*/
+#ifndef checkerboard_h
+#define checkerboard_h
+
+#include <iostream>
 
 // Reyes includes
 #include "surface.h"
@@ -33,7 +35,7 @@ class CheckerBoard: public Surface
        if (parameters.Exists("TileHeight"))     TileHeight    =parameters.Float("TileHeight");}
 
     void Dump()
-      {cout << "Kd=" << Kd << " Ks=" << Ks << " roughness=" << roughness << " TileWidth=" << TileWidth << " TileHeight=" << TileHeight << "Colour1=" << Colour1 << " Colour2=" << Colour2 << "\n";}
+      {std::cout << "Kd=" << Kd << " Ks=" << Ks << " roughness=" << roughness << " TileWidth=" << TileWidth << " TileHeight=" << TileHeight << "Colour1=" << Colour1 << " Colour2=" << Colour2 << "\n";}
 
     Colour SurfaceColour(Point3 P,        // Point in 3D eye/world/modelling space
                          float s,float t, // Surface texture co-ordinates

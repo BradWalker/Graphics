@@ -1,5 +1,3 @@
-#ifndef txtplastic_h
-#define txtplastic_h
 /*------------------------------------------------------
  * TITLE:  txtplastic.h
  * AUTHOR: Adrian Skilling
@@ -14,6 +12,10 @@
  * Initial revision
  *
  *-----------------------------------------------------*/
+#ifndef txtplastic_h
+#define txtplastic_h
+
+#include <iostream>
 
 // Reyes includes
 #include "surface.h"
@@ -42,7 +44,7 @@ class TxtPlastic: public Surface
       {Ka=_Ka; Kd=_Kd; Ks=_Ks; roughness=_roughness; specularcolour=_specularcolour; mapname=NULL;}
 
     void Dump()
-      {cout << "specularcolour=" << specularcolour << " Kd=" << Kd << " Ks=" << Ks << " roughness=" << roughness << "\n";}
+      {std::cout << "specularcolour=" << specularcolour << " Kd=" << Kd << " Ks=" << Ks << " roughness=" << roughness << "\n";}
 
     void SurfaceColour(Point3 P,        // Point in 3D eye/world/modelling space
                        float s,float t, // Surface texture co-ordinates

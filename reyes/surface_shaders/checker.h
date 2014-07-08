@@ -1,5 +1,3 @@
-#ifndef checker_h
-#define checker_h
 /*------------------------------------------------------
  * TITLE:  checker.h
  * AUTHOR: Adrian Skilling
@@ -14,6 +12,10 @@
  * Initial revision
  *
  *-----------------------------------------------------*/
+#ifndef checker_h
+#define checker_h
+
+#include <iostream>
 
 // Reyes includes
 #include "surface.h"
@@ -33,7 +35,7 @@ class Checker: public Surface
        if (parameters.Exists("tfreq"))          tfreq         =parameters.Float("tfreq");}
 
     void Dump()
-      {cout << "Kd=" << Kd << " Ks=" << Ks << " roughness=" << roughness << " sfreq=" << sfreq << " tfreq=" << tfreq << "darkcolour=" << darkcolour << "\n";}
+      {std::cout << "Kd=" << Kd << " Ks=" << Ks << " roughness=" << roughness << " sfreq=" << sfreq << " tfreq=" << tfreq << "darkcolour=" << darkcolour << "\n";}
 
     void SurfaceColour(Point3 P,        // Point in 3D eye/world/modelling space
                        float s,float t, // Surface texture co-ordinates

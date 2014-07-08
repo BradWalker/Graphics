@@ -1,5 +1,3 @@
-#ifndef wood_h
-#define wood_h
 /*------------------------------------------------------
  * TITLE:  wood.h
  * AUTHOR: Adrian Skilling
@@ -14,6 +12,10 @@
  * Initial revision
  *
  *-----------------------------------------------------*/
+#ifndef wood_h
+#define wood_h
+
+#include <iostream>
 
 // Reyes includes
 #include "surface.h"
@@ -34,7 +36,7 @@ class Wood: public Surface
      if (parameters.Exists("ringscale"))      ringscale     =parameters.Float("ringscale");}
 
     void Dump()
-      {cout << "ringscale=" << ringscale << " Ka=" << Ka << " Kd=" << Kd << " Ks=" << Ks << "roughness=" << roughness << " lightwood=" << lightwood << " darkwood=" << darkwood << "\n";}
+      {std::cout << "ringscale=" << ringscale << " Ka=" << Ka << " Kd=" << Kd << " Ks=" << Ks << "roughness=" << roughness << " lightwood=" << lightwood << " darkwood=" << darkwood << "\n";}
 
     void SurfaceColour(Point3 P,        // Point in 3D eye/world/modelling space
                        float s,float t, // Surface texture co-ordinates

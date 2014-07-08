@@ -1,5 +1,3 @@
-#ifndef plastic_h
-#define plastic_h
 /*------------------------------------------------------
  * TITLE:  plastic.h
  * AUTHOR: Adrian Skilling
@@ -14,6 +12,10 @@
  * Initial revision
  *
  *-----------------------------------------------------*/
+#ifndef plastic_h
+#define plastic_h
+
+#include <iostream>
 
 // Reyes includes
 #include "surface.h"
@@ -34,7 +36,7 @@ class Plastic: public Surface
       {Ka=_Ka; Kd=_Kd; Ks=_Ks; roughness=_roughness; specularcolour=_specularcolour;}
 
     void Dump()
-      {cout << "specularcolour=" << specularcolour << " Kd=" << Kd << " Ks=" << Ks << " roughness=" << roughness << "\n";}
+      {std::cout << "specularcolour=" << specularcolour << " Kd=" << Kd << " Ks=" << Ks << " roughness=" << roughness << "\n";}
 
     void SurfaceColour(Point3 P,        // Point in 3D eye/world/modelling space
                        float s,float t, // Surface texture co-ordinates

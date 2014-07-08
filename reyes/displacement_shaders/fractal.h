@@ -1,5 +1,3 @@
-#ifndef fractal_h
-#define fractal_h
 /*------------------------------------------------------
  * TITLE:  fractal.h
  * AUTHOR: Adrian Skilling
@@ -14,6 +12,10 @@
  * Initial revision
  *
  *-----------------------------------------------------*/
+#ifndef fractal_h
+#define fractal_h
+
+#include <iostream>
 
 // C includes
 #include <math.h>
@@ -40,7 +42,7 @@ class Fractal: public Displacement
        if (parameters.Exists("power"))     power=parameters.Float("power");}
 
     void Dump()
-      {cout << "Freq=" << freq << " Height=" << height << "\n";}
+      {std::cout << "Freq=" << freq << " Height=" << height << "\n";}
 
     float Value(Point3 P,        // Point in 3D eye/world/modelling space
                 float s,float t, // Displacement texture co-ordinates

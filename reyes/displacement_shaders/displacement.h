@@ -1,5 +1,3 @@
-#ifndef displacement_h
-#define displacement_h
 /*------------------------------------------------------
  * TITLE:  displacement.h
  * ENVIR:  RiscBSD
@@ -10,6 +8,10 @@
  * Initial revision
  *
  *-----------------------------------------------------*/
+#ifndef displacement_h
+#define displacement_h
+
+#include <iostream>
 
 // Reyes includes
 #include "paramlist.h"
@@ -22,7 +24,7 @@ class Displacement
       {return 0;}
 
     virtual void Dump()
-      {cerr << "No such displacement\n";}
+      {std::cerr << "No such displacement\n";}
 };
 
 #endif

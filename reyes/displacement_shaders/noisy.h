@@ -1,5 +1,3 @@
-#ifndef noisy_h
-#define noisy_h
 /*------------------------------------------------------
  * TITLE:  noisy.h
  * AUTHOR: Adrian Skilling
@@ -14,6 +12,10 @@
  * Initial revision
  *
  *-----------------------------------------------------*/
+#ifndef noisy_h
+#define noisy_h
+
+#include <iostream>
 
 // Reyes includes
 #include "noise.h"
@@ -33,7 +35,7 @@ class Noisy: public Displacement
     }
 
     void Dump()
-      {cout << "scale=" << scale << " height=" << height << "\n";}
+      {std::cout << "scale=" << scale << " height=" << height << "\n";}
 
     float Value(Point3 P,        // Point in 3D eye/world/modelling space
                 float s,float t, // Displacement texture co-ordinates
