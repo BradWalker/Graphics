@@ -444,7 +444,7 @@ void DisplayOptions::RiQuantize(char *type,int one,int min,int max,float ditherA
     if (!strcmp(type,"z"))
       depthQuantizer.RiQuantize(one,min,max,ditherAmplitude);
     else
-      cerr << "Unknown quantizer type `" << type << "'\n";
+      std::cerr << "Unknown quantizer type `" << type << "'\n";
   }
 }
 
@@ -626,7 +626,7 @@ void RiSurface(char *name,ParamList parameters)
     RiCurrent.shadingAttributes.surface=surface;
   }
   else
-    cerr << "Surface shader `" << name << "' does not exist\n";
+    std::cerr << "Surface shader `" << name << "' does not exist\n";
 }
 
 /*------------------------------------------------------
@@ -645,7 +645,7 @@ void ShadingAttributes::RiLightSource(char *name,ParamList parameters)
   if (light)
     lights.push_back(light);
   else
-    cerr << "Light shader `" << name << "' does not exist\n";
+    std::cerr << "Light shader `" << name << "' does not exist\n";
 }
 
 /******************************************************/
@@ -672,7 +672,7 @@ void RiDisplacement(char *name,ParamList parameters)
 
   RiCurrent.geometryAttributes.displacement=displacement;
   
-  if (!exists) {cerr << "Displacement shader `" << name << "' does not exist\n";}
+  if (!exists) {std::cerr << "Displacement shader `" << name << "' does not exist\n";}
 }
 
 /*------------------------------------------------------

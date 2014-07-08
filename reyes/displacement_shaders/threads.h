@@ -1,5 +1,3 @@
-#ifndef threads_h
-#define threads_h
 /*------------------------------------------------------
  * TITLE:  threads.h
  * AUTHOR: Adrian Skilling
@@ -14,6 +12,10 @@
  * Initial revision
  *
  *-----------------------------------------------------*/
+#ifndef threads_h
+#define threads_h
+
+#include <iostream>
 
 // C includes
 #include <math.h>
@@ -39,7 +41,7 @@ class Threads: public Displacement
        if (parameters.Exists("dampzone"))   dampzone=parameters.Float("dampzone");}
 
     void Dump()
-      {cout << "\n";}
+      {std::cout << "\n";}
 
     float Value(Point3 P,        // Point in 3D eye/world/modelling space
                 float s,float t, // Displacement texture co-ordinates

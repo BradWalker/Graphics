@@ -20,6 +20,7 @@
 
 // C++ includes
 #include <list>
+#include <cfloat>
 
 // C includes
 #include <limits.h>
@@ -44,7 +45,7 @@
 /* Definitions */
 
 #define RI_EPSILON     0.01
-#define RI_INFINITY    MAXFLOAT
+#define RI_INFINITY    FLT_MAX
 
 #define RI_NULL        NULL
 

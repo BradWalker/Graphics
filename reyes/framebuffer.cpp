@@ -75,7 +75,7 @@ Pixel* FrameBuffer::newPixel()
   if (free==0)
   {
     data=(char*)realloc(data,2*used*pixelSize);
-    if (!data) {cerr << "Cannot reserve space for more pixels\n"; exit(EXIT_FAILURE);}
+    if (!data) {std::cerr << "Cannot reserve space for more pixels\n"; exit(EXIT_FAILURE);}
     free=used;
   }
   // Get pointer to pixel and change free and used accordingly

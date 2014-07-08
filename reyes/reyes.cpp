@@ -69,13 +69,15 @@ char *ribfile=NULL;
 //---------------------------------------
 void usage(void)
 {
-  int i;
+  size_t i;
   char buffer[256];
 
   sprintf(buffer,"%s Version %s - %s",PROG_NAME,PROG_VERSION,PROG_DESC);
   fprintf(stderr,"%s\n",buffer);
-  for(i=0;i<strlen(buffer);i++)
+
+  for(i = 0;i < strlen(buffer); i++)
     fprintf(stderr,"~");
+
   fprintf(stderr,"\n");
   fprintf(stderr,"Usage: reyes -i <ribfile>\n");
   fprintf(stderr,"-i <ribfile>             Filename of RIB file to render\n");

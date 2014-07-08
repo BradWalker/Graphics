@@ -24,12 +24,12 @@ class ParamList
 {
   public:
     ParamList(){}
-    bool Exists(char *name);
+    bool Exists(const char *name);
 
-    int Int(char *name);
-    float Float(char *name);
-    char* String(char *name);
-    Vector3 Vector(char *name);
+    int Int(const char *name);
+    float Float(const char *name);
+    char* String(const char *name);
+    Vector3 Vector(const char *name);
     int Length(){return parameters.size();}
     void AddParameter(Parameter param){parameters.push_back(param);}
     
