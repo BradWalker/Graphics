@@ -22,8 +22,7 @@
 // Reyes includes
 #include "paramlist.h"
 #include <list>
-#include "iterator.h"
-#include "bool.h"
+#include <iterator>
 
 list<Parameter>::iterator Find(list<Parameter> &parameters,char *name,bool &found)
 {

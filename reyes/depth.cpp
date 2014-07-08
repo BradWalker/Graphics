@@ -25,7 +25,6 @@
 #include "depth.h"
 #include "rgbcolour.h"
 #include "colour.h"
-#include "bool.h"
 
 //=======================================
 // Constructor

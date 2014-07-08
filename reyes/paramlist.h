@@ -1,5 +1,3 @@
-#ifndef paramlist_h
-#define paramlist_h
 /*------------------------------------------------------
  * TITLE:  paramlist.h
  * AUTHOR: Adrian Skilling
@@ -14,12 +12,13 @@
  * Initial revision
  *
  *-----------------------------------------------------*/
+#ifndef paramlist_h
+#define paramlist_h
 
 // Reyes includes
 #include <list>
-#include "bool.h"
+#include <iterator>
 #include "parameter.h"
-#include "iterator.h"
 
 class ParamList
 {
@@ -34,7 +33,7 @@ class ParamList
     int Length(){return parameters.size();}
     void AddParameter(Parameter param){parameters.push_back(param);}
     
-    list<Parameter> parameters;
+    std::list<Parameter> parameters;
 };
 
 #endif

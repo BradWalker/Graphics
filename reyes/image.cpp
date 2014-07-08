@@ -25,7 +25,6 @@
 #include <stdio.h>
 
 // C++ includes
-#include <bool.h>
 
 // Reyes includes
 #include "image.h"

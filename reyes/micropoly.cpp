@@ -39,7 +39,6 @@
 #include "smath.h"
 #include "jitter.h"
 #include "useful.h"
-#include "bool.h"
 
 // C++ includes
 #include  <iostream>

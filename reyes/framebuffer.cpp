@@ -20,7 +20,6 @@
 #include <math.h>
 
 // C++ includes
-#include "bool.h"
 
 // Reyes includes
 #include "framebuffer.h"
