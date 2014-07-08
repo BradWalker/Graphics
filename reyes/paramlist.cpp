@@ -30,7 +30,7 @@ list<Parameter>::iterator Find(list<Parameter> &parameters,char *name,bool &foun
   Parameter param;
   list<Parameter>::iterator iter,iter_found;
 
-  found=FALSE;
+  found=false;
   iter=parameters.begin();
   for(i=0;i<parameters.size();i++)
   {
@@ -38,7 +38,7 @@ list<Parameter>::iterator Find(list<Parameter> &parameters,char *name,bool &foun
     if ((param.type==PARAMTYPE_STRING)&&
         (!strcmp(param.data.string,name)))
     {
-      found=TRUE;
+      found=true;
       iter_found=iter;
     }
     iter++;

@@ -117,9 +117,9 @@ bool Polygon::Diceable(float vpscale)
   vs=MAX((int)(d1/RiCurrent.shadingAttributes.shadingRate),1);
 
   if ((us*vs<=RiGlobal.options.maxMicroGridSize)&&(zmax<2*zmin))
-    return TRUE;
+    return true;
   else
-    return FALSE;
+    return false;
 }
 
 //=======================================
@@ -161,7 +161,7 @@ void Polygon::Dice(MicroGrid &microgrid,float vpscale)
 //---------------------------------------
 bool Polygon::Splitable()
 {
-  return TRUE;
+  return true;
 }
 
 //=======================================
@@ -199,7 +199,7 @@ bool Polygon::TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector)
 
   for(i=0;i<4;i++)
     p[i]=t_position*p[i];
-  return TRUE;
+  return true;
 }
 
 //=======================================
@@ -213,5 +213,5 @@ bool Polygon::EyeBound(BoundBox3 &bb)
   bb.max.x=max(max(p[0].x,p[1].x),max(p[2].x,p[3].x));
   bb.max.y=max(max(p[0].y,p[1].y),max(p[2].y,p[3].y));
   bb.max.z=max(max(p[0].z,p[1].z),max(p[2].z,p[3].z));
-  return TRUE;
+  return true;
 }

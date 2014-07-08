@@ -231,17 +231,17 @@ bool MicroGrid::ExtractMicroPolygon(MicroPolygon &m,int u,int v)
   if ((normal[u][v]*point[u][v])<0)
   {
     m=MicroPolygon(point[u][v],point[u+1][v],point[u+1][v+1],point[u][v+1],colour[u][v],opacity[u][v]);
-    return TRUE;
+    return true;
   }
   else
   {
     if (RiCurrent.geometryAttributes.sides==2)
     {
       m=MicroPolygon(point[u][v],point[u][v+1],point[u+1][v+1],point[u+1][v],colour[u][v],opacity[u][v]);
-      return TRUE;
+      return true;
     }
   }
-  return FALSE;
+  return false;
 }
 
 //=======================================

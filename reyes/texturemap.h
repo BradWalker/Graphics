@@ -23,7 +23,7 @@
 class TextureMap
 {
   public:
-    TextureMap(int maxresolution=0,int samples=1,int swrap=RI_PERIODIC,int twrap=RI_PERIODIC,bool multiresolution=TRUE);
+    TextureMap(int maxresolution=0,int samples=1,int swrap=RI_PERIODIC,int twrap=RI_PERIODIC,bool multiresolution=true);
     TextureMap(char *imagefile,int swrap,int twrap,
                 float (*filterfunc)(float,float,float,float),float swidth,float twidth);
     TextureMap(char *texturefile);

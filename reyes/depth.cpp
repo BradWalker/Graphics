@@ -90,10 +90,10 @@ bool Depth::WriteDepth(int x,int y,float z)
     if (z<depth[x][y])
     {
       depth[x][y]=z;
-      return TRUE;
+      return true;
     }
   }
-  return FALSE;
+  return false;
 }
 
 //=======================================
@@ -165,5 +165,5 @@ bool Depth::WriteAsPBM(char *filename)
     }
   }
   fclose(fp);
-  return TRUE;
+  return true;
 }

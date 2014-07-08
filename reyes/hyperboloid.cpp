@@ -100,7 +100,7 @@ void Hyperboloid::DoDice(MicroGrid &microgrid,int us,int vs)
 //---------------------------------------
 bool Hyperboloid::Splitable()
 {
-  return TRUE;
+  return true;
 }
 
 //=======================================
@@ -123,7 +123,7 @@ void Hyperboloid::Split(list<Primitive*> &primlist)
 //---------------------------------------
 bool Hyperboloid::TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector)
 {
-  return TRUE;
+  return true;
 }
 
 //=======================================
@@ -131,5 +131,5 @@ bool Hyperboloid::TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector)
 //---------------------------------------
 bool Hyperboloid::EyeBound(BoundBox3 &bb)
 {
-  return FALSE;
+  return false;
 }

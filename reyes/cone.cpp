@@ -94,7 +94,7 @@ void Cone::DoDice(MicroGrid &microgrid,int us,int vs)
 //---------------------------------------
 bool Cone::Splitable()
 {
-  return TRUE;
+  return true;
 }
 
 //=======================================
@@ -116,7 +116,7 @@ void Cone::Split(list<Primitive*> &primlist)
 //---------------------------------------
 bool Cone::TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector)
 {
-  return TRUE;
+  return true;
 }
 
 //=======================================
@@ -124,5 +124,5 @@ bool Cone::TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector)
 //---------------------------------------
 bool Cone::EyeBound(BoundBox3 &bb)
 {
-  return FALSE;
+  return false;
 }

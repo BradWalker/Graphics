@@ -469,7 +469,7 @@ void GlobalState::RiOption(char *name,ParamList parameters)
 {
   if (!strcmp(name,"jitter"))
   {
-    options.jitter=(parameters.Int("jitter")==1)?TRUE:FALSE;
+    options.jitter=(parameters.Int("jitter")==1)?true:false;
   }
 }
 
@@ -664,11 +664,11 @@ void RiSides(int sides)
 void RiDisplacement(char *name,ParamList parameters)
 {
   Displacement *displacement=NULL;
-  bool exists=FALSE;
+  bool exists=false;
 
-  if (!strcmp(name,"fractal")) {displacement=new Fractal(parameters); exists=TRUE;}
-  if (!strcmp(name,"noisy"))   {displacement=new Noisy(parameters);   exists=TRUE;}
-  if (!strcmp(name,"threads")) {displacement=new Threads(parameters); exists=TRUE;}
+  if (!strcmp(name,"fractal")) {displacement=new Fractal(parameters); exists=true;}
+  if (!strcmp(name,"noisy"))   {displacement=new Noisy(parameters);   exists=true;}
+  if (!strcmp(name,"threads")) {displacement=new Threads(parameters); exists=true;}
 
   RiCurrent.geometryAttributes.displacement=displacement;
   

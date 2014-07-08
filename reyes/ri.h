@@ -227,7 +227,7 @@ class Options
     {
       verbosity=0;
       maxMicroGridSize=10000;
-      jitter=FALSE;
+      jitter=false;
     }
 
     int verbosity;

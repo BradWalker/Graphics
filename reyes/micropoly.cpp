@@ -113,10 +113,10 @@ bool MicroPolygon::Sample(float sx,float sy,float &z,Colour &colour,Opacity &opa
     z=this->p[0].z;
     colour=this->colour;
     opacity=this->opacity;
-    return TRUE;
+    return true;
   }
   else
-    return FALSE;
+    return false;
 }
 
 //=======================================

@@ -121,14 +121,14 @@ void FrameBuffer::WriteOpacity(int x,int y,Opacity opacity)
 
 bool FrameBuffer::WriteDepth(int x,int y,float newz)
 {
-  if ((x<0)||(x>=width)||(y<0)||(y>=height)) return FALSE;
+  if ((x<0)||(x>=width)||(y<0)||(y>=height)) return false;
   if (pixels[x][y]==NULL) pixels[x][y]=newPixel();
   if (newz<pixels[x][y]->sample[z])
   {
     pixels[x][y]->sample[z]=newz;
-    return TRUE;
+    return true;
   }
-  return FALSE;
+  return false;
 }
 
 bool FrameBuffer::WritePixel(int x,int y,float newz,Colour colour,Opacity opacity)
@@ -137,7 +137,7 @@ bool FrameBuffer::WritePixel(int x,int y,float newz,Colour colour,Opacity opacit
   Pixel *pixel;
   Pixel *newpixel;
 
-  if ((x<0)||(x>=width)||(y<0)||(y>=height)) return FALSE;
+  if ((x<0)||(x>=width)||(y<0)||(y>=height)) return false;
   if ((opacity.r+opacity.g+opacity.b)>0)
   {
     if (pixels[x][y]==NULL) pixels[x][y]=newPixel();
@@ -182,7 +182,7 @@ bool FrameBuffer::WritePixel(int x,int y,float newz,Colour colour,Opacity opacit
       newpixel->sample[z]=newz;
     }
   }
-  return TRUE;
+  return true;
 }
 
 float gamma(float value,float gain,float gamma)
@@ -235,7 +235,7 @@ bool FrameBuffer::WriteImageAsPBM(char *filename)
   float filter[RiGlobal.display.filterXWidth][RiGlobal.display.filterYWidth];
   Colour colour;
 
-  if (!fp) return FALSE;
+  if (!fp) return false;
 
   if (c!=-1)
     fprintf(fp,"P6\n");
@@ -299,7 +299,7 @@ bool FrameBuffer::WriteImageAsPBM(char *filename)
       }
     }
   }
-  return TRUE;
+  return true;
 }
 
 bool FrameBuffer::WriteDepthMap(char *filename)

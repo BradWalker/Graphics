@@ -105,7 +105,7 @@ void Disk::DoDice(MicroGrid &microgrid,int us,int vs)
 //---------------------------------------
 bool Disk::Splitable()
 {
-  return TRUE;
+  return true;
 }
 
 //=======================================
@@ -127,7 +127,7 @@ void Disk::Split(list<Primitive*> &primlist)
 //---------------------------------------
 bool Disk::TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector)
 {
-  return TRUE;
+  return true;
 }
 
 //=======================================
@@ -135,5 +135,5 @@ bool Disk::TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector)
 //---------------------------------------
 bool Disk::EyeBound(BoundBox3 &bb)
 {
-  return FALSE;
+  return false;
 }

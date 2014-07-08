@@ -52,10 +52,10 @@ class Primitive
 
     virtual void DoDice(MicroGrid &microgrid,int us,int vs){cout << "DoDice()::Unknown primitive!\n";}
 
-    virtual bool Splitable(){cout << "Unknown primitive!"; return FALSE;}
+    virtual bool Splitable(){cout << "Unknown primitive!"; return false;}
     virtual void Split(list<Primitive*> &primlist){cout << "Split():Unknown primitive!";}
 
-    virtual bool EyeBound(BoundBox3 &bb){cout << "EyeBound():Unknown primitive!\n"; return FALSE;}
+    virtual bool EyeBound(BoundBox3 &bb){cout << "EyeBound():Unknown primitive!\n"; return false;}
 
     void Dice(MicroGrid &microgrid,float xscale,float yscale);
     void EstimateGridSize(float xscale,float yscale,int &us,int &vs);

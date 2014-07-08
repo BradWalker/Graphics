@@ -84,7 +84,7 @@ void Torus::DoDice(MicroGrid &microgrid,int us,int vs)
 //---------------------------------------
 bool Torus::Splitable()
 {
-  return TRUE;
+  return true;
 }
 
 //=======================================
@@ -106,7 +106,7 @@ void Torus::Split(list<Primitive*> &primlist)
 //---------------------------------------
 bool Torus::TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector)
 {
-  return TRUE;
+  return true;
 }
 
 //=======================================
@@ -114,5 +114,5 @@ bool Torus::TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector)
 //---------------------------------------
 bool Torus::EyeBound(BoundBox3 &bb)
 {
-  return FALSE;
+  return false;
 }

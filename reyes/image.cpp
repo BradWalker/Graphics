@@ -177,7 +177,7 @@ bool Image::WriteAsPBM(char* filename,int xSamplingRate=1,int ySamplingRate=1)
   int x,y,xs,ys,r,g,b;
   unsigned char col[3];
 
-  if (!fp) return FALSE;
+  if (!fp) return false;
   switch(type)
   {
     case GREYSCALE:
@@ -216,5 +216,5 @@ bool Image::WriteAsPBM(char* filename,int xSamplingRate=1,int ySamplingRate=1)
       fwrite((void*)&col,1,3,fp);
     }
   }
-  return TRUE;
+  return true;
 }

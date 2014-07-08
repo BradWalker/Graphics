@@ -56,9 +56,9 @@ bool Primitive::Diceable(float xscale,float yscale)
 
   EstimateGridSize(xscale,yscale,us,vs);
   if (us*vs<=RiGlobal.options.maxMicroGridSize)
-    return TRUE;
+    return true;
   else
-    return FALSE;
+    return false;
 }
 
 //=======================================

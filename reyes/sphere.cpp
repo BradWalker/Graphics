@@ -108,7 +108,7 @@ void Sphere::DoDice(MicroGrid &microgrid,int us,int vs)
 //---------------------------------------
 bool Sphere::Splitable()
 {
-  return TRUE;
+  return true;
 }
 
 //=======================================
@@ -130,7 +130,7 @@ void Sphere::Split(list<Primitive*> &primlist)
 //---------------------------------------
 bool Sphere::TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector)
 {
-  return TRUE;
+  return true;
 }
 
 //=======================================
@@ -138,5 +138,5 @@ bool Sphere::TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector)
 //---------------------------------------
 bool Sphere::EyeBound(BoundBox3 &bb)
 {
-  return FALSE;
+  return false;
 }

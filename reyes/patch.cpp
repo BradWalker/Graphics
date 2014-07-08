@@ -180,9 +180,9 @@ bool Patch::Diceable(float vpscale)
 
   EstimateGridSize(vpscale,us,vs);
   if (us*vs<=reyesoptions.maxmicrogridsize)
-    return TRUE;
+    return true;
   else
-    return FALSE;
+    return false;
 }
 
 //=======================================
@@ -216,7 +216,7 @@ void Patch::Dice(MicroGrid &microgrid,float vpscale)
 //---------------------------------------
 bool Patch::Splitable()
 {
-  return TRUE;
+  return true;
 }
 
 //=======================================
@@ -268,7 +268,7 @@ bool Patch::TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector)
   for(i=0;i<4;i++)
     for(j=0;j<4;j++)
       control[i][j]=t_position*control[i][j];
-  return TRUE;
+  return true;
 }
 
 //=======================================
@@ -292,5 +292,5 @@ bool Patch::EyeBound(BoundBox3 &bb)
       bb.max.z=MAX(bb.max.z,control[s][t].z);
     }
   }
-  return TRUE;
+  return true;
 }

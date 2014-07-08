@@ -115,7 +115,7 @@ void Cylinder::DoDice(MicroGrid &microgrid,int us,int vs)
 //---------------------------------------
 bool Cylinder::Splitable()
 {
-  return TRUE;
+  return true;
 }
 
 //=======================================
@@ -138,7 +138,7 @@ void Cylinder::Split(list<Primitive*> &primlist)
 //---------------------------------------
 bool Cylinder::TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector)
 {
-  return TRUE;
+  return true;
 }
 
 //=======================================
@@ -146,5 +146,5 @@ bool Cylinder::TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector)
 //---------------------------------------
 bool Cylinder::EyeBound(BoundBox3 &bb)
 {
-  return FALSE;
+  return false;
 }

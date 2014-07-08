@@ -23,7 +23,7 @@
 void GlobalState::RenderPrimitive(Primitive *prim)
 {
   BoundBox3 eyebound;
-  bool undiceable=TRUE;
+  bool undiceable=true;
   int u,v;
   float xscale=tCameraToRaster[0][0];
   float yscale=tCameraToRaster[1][1];
