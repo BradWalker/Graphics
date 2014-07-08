@@ -18,8 +18,6 @@
 // C++ includes
 #include <iostream>
 #include <iomanip>
-
-// Misc includes
 #include <list>
 
 // Reyes includes
@@ -44,7 +42,7 @@ class Hyperboloid: public Primitive
     void DoDice(MicroGrid &microgrid,int us,int vs);
 
     bool Splitable();
-    void Split(list<Primitive*> &primlist);
+    void Split(std::list<Primitive*> &primlist);
 
     bool EyeBound(BoundBox3 &bb);
 

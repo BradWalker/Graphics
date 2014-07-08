@@ -13,6 +13,8 @@
 // C includes
 
 // C++ includes
+#include <list>
+#include <iostream>
 
 // Reyes includes
 #include "ri.h"
@@ -29,7 +31,7 @@ void GlobalState::RenderPrimitive(Primitive *prim)
   float yscale=tCameraToRaster[1][1];
   MicroGrid microgrid;       /* Grid of micro-polygons */
   MicroPolygon micropolygon; /* Single micro-polygon   */
-  list<Primitive*> primitives;
+  std::list<Primitive*> primitives;
 
   // Add primitive to head of primitive to be rendered list
   primitives.push_front(prim);
@@ -72,7 +74,7 @@ void GlobalState::RenderPrimitive(Primitive *prim)
     {
       if (RiGlobal.options.verbosity>0)
       {
-	cout << "Splitting...\n";
+	std::cout << "Splitting...\n";
       }
       prim->Split(primitives);
     }

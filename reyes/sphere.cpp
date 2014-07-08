@@ -26,6 +26,8 @@
  *
  *-----------------------------------------------------*/
 
+#include <iostream>
+
 // C includes
 #include <math.h>
 
@@ -54,7 +56,7 @@ Sphere::Sphere(float radius,float zmin,float zmax,float arcmin,float arcmax)
 //========STREAM INPUT/OUTPUT============
 //=======================================
 
-ostream &operator<<(ostream &io,const Sphere &s)
+std::ostream &operator<<(std::ostream &io, const Sphere &s)
 {
   io << "Sphere " << s.radius << " " << s.zmin << " " << s.zmax << " " << s.arcmin << "-" << s.arcmax << "\n";
   return io;
@@ -86,7 +88,10 @@ void Sphere::DoDice(MicroGrid &microgrid,int us,int vs)
   microgrid.SetSize(us,vs);
   vangmin=asin(zmin/radius);
   vangmax=asin(zmax/radius);
-  microgrid.SetTextureCoords(arcmin/360,vangmin/(2*PI),arcmax/360,vangmax/(2*PI));
+  // FIXME - why won't M_PI work..
+  // microgrid.SetTextureCoords(arcmin/360,vangmin/(2* M_PI),arcmax/360,vangmax/(2*PI));
+  microgrid.SetTextureCoords(arcmin/360,vangmin/(2 * 3.141592653589793238463),
+				arcmax/360,vangmax/(2 * 3.141592653589793238463));
   for(u=0;u<=us;u++)
   {
     uang=DEGTORAD*(arcmin+((arcmax-arcmin)*u)/us);
@@ -114,7 +119,7 @@ bool Sphere::Splitable()
 //=======================================
 // Split
 //---------------------------------------
-void Sphere::Split(list<Primitive*> &primlist)
+void Sphere::Split(std::list<Primitive*> &primlist)
 {
   float zcent=(zmin+zmax)/2;
   float arccent=(arcmin+arcmax)/2;

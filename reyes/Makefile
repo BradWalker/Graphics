@@ -18,8 +18,8 @@ INCLUDES = -I. -Isurface_shaders -Idisplacement_shaders -Ilight_shaders
 
 CC     = gcc
 CPP    = g++
-CFLAGS = -W -ansi
-LIBS   = -Lsurface_shaders -Ldisplacement_shaders -Llight_shaders -lg++ -lstdc++ -lm -lsurface_shaders -ldisplacement_shaders -llight_shaders
+CFLAGS = -W
+LIBS   = -Lsurface_shaders -Ldisplacement_shaders -Llight_shaders -lstdc++ -lm -lsurface_shaders -ldisplacement_shaders -llight_shaders
 
 reyes_sources  = sphere.cpp cone.cpp cylinder.cpp disk.cpp torus.cpp \
                  paraboloid.cpp hyperboloid.cpp primitive.cpp \

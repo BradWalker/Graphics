@@ -18,6 +18,9 @@
 #include <math.h>
 
 // C++ includes
+#include <cfloat>
+#include <iostream>
+
 #include "limits.h"
 
 // Reyes includes
@@ -45,7 +48,7 @@ Depth::Depth(int width,int height)
   {
     for(y=0;y<height;y++)
     {
-      depth[x][y]=MAXFLOAT;
+      depth[x][y]=FLT_MAX;
     }
   }
 }
@@ -75,7 +78,7 @@ void Depth::Clear()
   {
     for(y=0;y<height;y++)
     {
-      depth[x][y]=MAXFLOAT;
+      depth[x][y]=FLT_MAX;
     }
   }
 }
@@ -115,7 +118,7 @@ float Depth::ReadDepth(int x,int y)
 //========STREAM INPUT/OUTPUT============
 //=======================================
 
-ostream &operator<<(ostream &io,const Depth &depth)
+std::ostream &operator<<(std::ostream &io,const Depth &depth)
 {
   int x,y;
 
@@ -141,12 +144,12 @@ bool Depth::WriteAsPBM(char *filename)
 
   fprintf(fp,"P6\n%d %d\n255\n",width,height);
   maxz=0;
-  minz=MAXFLOAT;
+  minz=FLT_MAX;
   for(y=0;y<height;y++)
   {
     for(x=0;x<width;x++)
     {
-      if ((depth[x][y]>maxz)&&(depth[x][y]<MAXFLOAT)) maxz=depth[x][y];
+      if ((depth[x][y]>maxz)&&(depth[x][y] < FLT_MAX)) maxz=depth[x][y];
       if (depth[x][y]<minz) minz=depth[x][y];
     }
   }

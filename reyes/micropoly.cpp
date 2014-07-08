@@ -70,7 +70,7 @@ MicroPolygon::MicroPolygon()
 //========STREAM INPUT/OUTPUT============
 //=======================================
 
-ostream &operator<<(ostream &io,const MicroPolygon &m)
+std::ostream &operator<<(std::ostream &io,const MicroPolygon &m)
 {
   io << "Vertices:" << m.p[0] << "," << m.p[1] << "," << m.p[2] << "," << m.p[3] << " Colour:" << m.colour;
   return io;

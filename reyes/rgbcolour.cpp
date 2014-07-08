@@ -13,6 +13,8 @@
  *
  *-----------------------------------------------------*/
 
+#include <iostream>
+
 // Reyes includes
 #include "rgbcolour.h"
 
@@ -20,7 +22,7 @@
 //========STREAM INPUT/OUTPUT============
 //=======================================
 
-ostream &operator<<(ostream &io,const RGBColour &c)
+std::ostream &operator<<(std::ostream &io,const RGBColour &c)
 {
   io << "[" << (int)c.r << "," << (int)c.g << "," << (int)c.b << "]";
 }

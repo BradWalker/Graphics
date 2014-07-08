@@ -17,9 +17,9 @@
 #include "parameter.h"
 
 // C++ includes
-#include  <iostream>
+#include <iostream>
 
-ostream &operator<<(ostream &io,const Parameter &p)
+std::ostream &operator<<(std::ostream &io,const Parameter &p)
 {
   switch(p.type)
   {

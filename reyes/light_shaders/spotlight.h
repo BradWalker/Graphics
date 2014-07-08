@@ -15,6 +15,8 @@
  *
  *-----------------------------------------------------*/
 
+#include <iostream>
+
 // Reyes includes
 #include "light.h"
 
@@ -30,7 +32,7 @@ class Spotlight: public Light
 
     void Dump();
 
-    friend ostream &operator<<(ostream &io,const Spotlight &l);
+    friend std::ostream &operator<<(std::ostream &io,const Spotlight &l);
 
   private:
     float LocalIntensity(Point3 p);

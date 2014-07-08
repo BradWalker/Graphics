@@ -13,6 +13,9 @@
  *
  *-----------------------------------------------------*/
 
+#include <iostream>
+#include <list>
+
 // C includes
 #include <math.h>
 
@@ -43,7 +46,7 @@ Paraboloid::Paraboloid(float rmax,float zmin,float zmax,float thetamin,float the
 //========STREAM INPUT/OUTPUT============
 //=======================================
 
-ostream &operator<<(ostream &io,const Paraboloid &s)
+std::ostream &operator<<(std::ostream &io,const Paraboloid &s)
 {
   io << "Paraboloid " << s.rmax << " " << s.zmin << " " << s.zmax << " " << s.thetamin << "-" << s.thetamax << "\n";
   return io;
@@ -51,7 +54,7 @@ ostream &operator<<(ostream &io,const Paraboloid &s)
 
 void Paraboloid::Dump()
 {
-  cout << *this;
+  std::cout << *this;
 }
 
 //=======================================
@@ -94,7 +97,7 @@ bool Paraboloid::Splitable()
 //=======================================
 // Split
 //---------------------------------------
-void Paraboloid::Split(list<Primitive*> &primlist)
+void Paraboloid::Split(std::list<Primitive*> &primlist)
 {
   float zcent=(zmin+zmax)/2;
   float thetacent=(thetamin+thetamax)/2;

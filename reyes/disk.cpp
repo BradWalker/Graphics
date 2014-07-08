@@ -31,6 +31,9 @@
  *
  *-----------------------------------------------------*/
 
+#include <list>
+#include <iostream>
+
 // C includes
 #include <math.h>
 
@@ -60,16 +63,16 @@ Disk::Disk(float z,float radius,float arcmin,float arcmax,float tmin,float tmax)
 //========STREAM INPUT/OUTPUT============
 //=======================================
 
-ostream &operator<<(ostream &io,const Disk &d)
+std::ostream &operator<<(std::ostream &io,const Disk &d)
 {
-  io.setf(ios::showpoint+ios::right+ios::fixed);
+  io.setf(std::ios::showpoint | std::ios::right | std::ios::fixed);
   io << "Disk " << d.z << " " << d.radius << " " << d.arcmin << "-" << d.arcmax << "\n";
   return io;
 }
 
 void Disk::Dump()
 {
-  cout << *this;
+  std::cout << *this;
 }
 
 //=======================================
@@ -111,7 +114,7 @@ bool Disk::Splitable()
 //=======================================
 // Split
 //---------------------------------------
-void Disk::Split(list<Primitive*> &primlist)
+void Disk::Split(std::list<Primitive*> &primlist)
 {
   float arccent=0.5*(arcmax+arcmin);
   float tcent=0.5*(tmin+tmax);

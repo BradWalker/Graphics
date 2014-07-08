@@ -31,6 +31,9 @@
  *
  *-----------------------------------------------------*/
 
+#include <iostream>
+#include <list>
+
 // C includes
 #include <math.h>
 
@@ -86,28 +89,28 @@ void MicroGrid::Allocate(int width,int height)
   this->height=height;
 
   // Create 2D array of points
-  point=new (Point3*)[width+1];
+  point=new Point3*[width+1];
   point_block=new Point3[(width+1)*(height+1)];
   if (!point_block) RiError("Cannot reserve memory for point grid %d x %d",width+1,height+1);
   for(x=0;x<width+1;x++)
     point[x]=&point_block[x*(height+1)];
 
   // Create 2D array of colours
-  colour=new (Colour*)[width];
+  colour=new Colour*[width];
   colour_block=new Colour[width*height];
   if (!point_block) RiError("Cannot reserve memory for colour grid %d x %d",width,height);
   for(x=0;x<width;x++)
     colour[x]=&colour_block[x*height];
 
   // Create 2D array of colours
-  opacity=new (Opacity*)[width];
+  opacity=new Opacity*[width];
   opacity_block=new Opacity[width*height];
   if (!opacity_block) RiError("Cannot reserve memory for opacity grid %d x %d",width,height);
   for(x=0;x<width;x++)
     opacity[x]=&opacity_block[x*height];
 
   // Create 2D array of normals
-  normal=new (Vector3*)[width];
+  normal=new Vector3*[width];
   normal_block=new Vector3[(width+1)*(height+1)];
   if (!normal_block) RiError("Cannot reserve memory for normal grid %d x %d",width,height);
   for(x=0;x<width+1;x++)
@@ -154,7 +157,7 @@ void MicroGrid::Free()
 //========STREAM INPUT/OUTPUT============
 //=======================================
 
-ostream &operator<<(ostream &io,const MicroGrid &m)
+std::ostream &operator<<(std::ostream &io,const MicroGrid &m)
 {
   int x,y;
 
@@ -273,12 +276,13 @@ void MicroGrid::ComputeNormals()
 //=======================================
 // Shade
 //---------------------------------------
-void MicroGrid::Shade(list<Light*> &lights)
+void MicroGrid::Shade(std::list<Light*> &lights)
 {
-  int u,v,i;
+  int u,v;
+  unsigned int i;
   float diffu,diffv;
   Vector3 N;
-  list<Light*>::iterator iter;
+  std::list<Light*>::iterator iter;
   Light *light;
   Colour surf_colour;
   Opacity surf_opacity;
@@ -287,9 +291,9 @@ void MicroGrid::Shade(list<Light*> &lights)
   tWorldToEye=RiGlobal.tWorldToCamera;
   tEyeToWorld=tWorldToEye.Inverse();
 
-  // std::cout << "WorldToEye (same as dice?):\n" << tWorldToEye << "\n";
+  // cout << "WorldToEye (same as dice?):\n" << tWorldToEye << "\n";
 
-  // std::cout << "Identity ?\n" << tWorldToEye*tEyeToWorld << "\n";
+  // cout << "Identity ?\n" << tWorldToEye*tEyeToWorld << "\n";
 
   // Set resolution from microgrid size
   RiCurrent.shadingAttributes.resolution=(int)logn(2,width/(umax-umin));

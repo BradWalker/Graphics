@@ -19,6 +19,8 @@
  *
  *-----------------------------------------------------*/
 
+#include <iostream>
+
 // C includes
 #include <math.h>
 
@@ -31,7 +33,7 @@
 // Constructor
 //---------------------------------------
 Shadowspot::Shadowspot(Point3 _from,Point3 _to,Colour _colour,float _intensity,
-                       float _coneangle,float _conedeltaangle,float _beamdistribution,char *map=NULL,
+                       float _coneangle,float _conedeltaangle,float _beamdistribution,char *map,
 		       float _radius)
 {
   from=RiGlobal.tWorldToCamera*RiCurrent.transform*_from;
@@ -248,7 +250,7 @@ Colour Shadowspot::Specular(Point3 P,Vector3 N,float shinyness)
 //---------------------------------------
 void Shadowspot::Dump()
 {
-  cout << *this;
+  std::cout << *this;
 }
 
 //=======================================
@@ -262,7 +264,7 @@ void Shadowspot::loadDepthMap(char *filename)
   fprintf(stderr,"Opening `%s'\n",filename);
   if (!fp) RiError("Cannot open depth map `%s'",filename);
   fscanf(fp,"%d\n%d\n",&width,&height);
-  cout << width << "," << height << "\n";
+  std::cout << width << "," << height << "\n";
   tWorldToCamera.readBinary(fp);
   tCameraToRaster.readBinary(fp);
   depth=(float*)malloc(width*height*sizeof(float));
@@ -276,7 +278,7 @@ void Shadowspot::loadDepthMap(char *filename)
 //========STREAM INPUT/OUTPUT============
 //=======================================
 
-ostream &operator<<(ostream &io,const Shadowspot &l)
+std::ostream &operator<<(std::ostream &io,const Shadowspot &l)
 {
-  cout << "from: " << l.from << " to:" << l.to << " Colour: " << l.colour << " Inten.: " << l.intensity;
+  std::cout << "from: " << l.from << " to:" << l.to << " Colour: " << l.colour << " Inten.: " << l.intensity;
 }

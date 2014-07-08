@@ -19,6 +19,7 @@
  *-----------------------------------------------------*/
 
 // C++ includes
+#include <list>
 
 // Reyes includes
 #include "primitive.h"
@@ -43,7 +44,7 @@ class Patch: public Primitive
     void Dice(MicroGrid &microgrid,float vpscale);
 
     bool Splitable();
-    void Split(list<Primitive*> &primlist);
+    void Split(std::list<Primitive*> &primlist);
 
     bool EyeBound(BoundBox3 &bb);
 

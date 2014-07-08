@@ -15,6 +15,8 @@
  *
  *-----------------------------------------------------*/
 
+#include <iostream>
+
 // Reyes includes
 #include "light.h"
 
@@ -30,7 +32,7 @@ class Distantlight: public Light
 
     void Dump();
 
-    friend ostream &operator<<(ostream &io,const Distantlight &l);
+    friend std::ostream &operator<<(std::ostream &io,const Distantlight &l);
 
   private:
     Vector3 L;

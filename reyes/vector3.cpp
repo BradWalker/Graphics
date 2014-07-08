@@ -43,15 +43,15 @@ Vector3::Vector3(float x,float y,float z)
 //========STREAM INPUT/OUTPUT============
 //=======================================
 
-ostream &operator<<(ostream &io,const Vector3 &v)
+std::ostream &operator<<(std::ostream &io,const Vector3 &v)
 {
-  io.setf(ios::showpoint+ios::right+ios::fixed);
+  io.setf(std::ios::showpoint | std::ios::right | std::ios::fixed);
   io << "(";
-  io << setprecision(2) << v.x;
+  io << std::setprecision(2) << v.x;
   io << ",";
-  io << setprecision(2) << v.y;
+  io << std::setprecision(2) << v.y;
   io << ",";
-  io << setprecision(2) << v.z;
+  io << std::setprecision(2) << v.z;
   io << ")";
   return io;
 }

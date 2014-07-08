@@ -30,7 +30,7 @@
 class MicroPolygon
 {
   public:
-    MicroPolygon::MicroPolygon();
+    MicroPolygon();
     MicroPolygon(Point3 &p1,Point3 &p2,Point3 &p3,Point3 &p4,Colour &colour,Opacity &opacity);
 
     friend std::ostream &operator<<(std::ostream &io,const MicroPolygon &m);
@@ -38,7 +38,7 @@ class MicroPolygon
     void TransformToScreenSpace(Matrix4 &transform);
 
     bool Sample(float sx,float sy,float &z,Colour &colour,Opacity &opacity);
-    void MicroPolygon::Rasterize(FrameBuffer &framebuffer);
+    void Rasterize(FrameBuffer &framebuffer);
 
   private:
     Point3 p[4];          // screen-space with Z in eye-space

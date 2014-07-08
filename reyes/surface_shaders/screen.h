@@ -15,6 +15,8 @@
  *
  *-----------------------------------------------------*/
 
+#include <iostream>
+
 // Reyes includes
 #include "surface.h"
 #include "ri.h"
@@ -36,7 +38,7 @@ class Screen: public Surface
        if (parameters.Exists("tdensity"))       tdensity      =parameters.Float("tdensity");}
 
     void Dump()
-      {cout << "Kd=" << Kd << " Ks=" << Ks << " roughness=" << roughness << " sfreq=" << sfreq << " tfreq=" << tfreq << "\n";}
+      {std::cout << "Kd=" << Kd << " Ks=" << Ks << " roughness=" << roughness << " sfreq=" << sfreq << " tfreq=" << tfreq << "\n";}
 
     void SurfaceColour(Point3 P,        // Point in 3D eye/world/modelling space
                        float s,float t, // Surface texture co-ordinates

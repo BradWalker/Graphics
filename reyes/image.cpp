@@ -21,6 +21,7 @@
 
 // C includes
 #include <math.h>
+#include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -171,7 +172,7 @@ float Image::ReadGrey(int x,int y)
 //=======================================
 // WriteAsPBM
 //---------------------------------------
-bool Image::WriteAsPBM(char* filename,int xSamplingRate=1,int ySamplingRate=1)
+bool Image::WriteAsPBM(char* filename,int xSamplingRate,int ySamplingRate)
 {
   FILE *fp=fopen(filename,"wb");
   int x,y,xs,ys,r,g,b;

@@ -13,6 +13,8 @@
  *
  *-----------------------------------------------------*/
 
+#include <math.h>
+
 #include "quaternion.h"
 #include "useful.h"
 
@@ -43,7 +45,7 @@ Matrix4 Quaternion::RotationMatrix()
 //========STREAM INPUT/OUTPUT============
 //=======================================
 
-ostream &operator<<(ostream &io,const Quaternion &q)
+std::ostream &operator<<(std::ostream &io,const Quaternion &q)
 {
   io << "[" << q.x << "," << q.y << "," << q.z << "," << q.w << "]";
   return io;

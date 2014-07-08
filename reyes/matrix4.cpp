@@ -22,6 +22,10 @@
  *
  *-----------------------------------------------------*/
 
+#include <iostream>
+#include <math.h>
+
+
 // Reyes includes
 #include "matrix4.h"
 #include "vector3.h"
@@ -121,7 +125,7 @@ void Matrix4::Rotate(Vector3 r)
   *this=(*this)*m;
 }
 
-ostream &operator<<(ostream &io,Matrix4 &m)
+std::ostream &operator<<(std::ostream &io,Matrix4 &m)
 {
   int i,j;
 

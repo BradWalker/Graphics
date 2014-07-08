@@ -13,6 +13,8 @@
  *
  *-----------------------------------------------------*/
 
+#include <iostream>
+
 // Reyes includes
 #include "colour.h"
 
@@ -49,7 +51,7 @@ Colour operator/(Colour c,float s)
 //=======================================
 //========STREAM INPUT/OUTPUT============
 //=======================================
-ostream &operator<<(ostream &io,const Colour &colour)
+std::ostream &operator<<(std::ostream &io,const Colour &colour)
 {
   io << "(" << colour.r << " " << colour.g << " " << colour.b << ")";
   return io;

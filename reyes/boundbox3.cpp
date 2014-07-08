@@ -22,6 +22,8 @@
  *
  *-----------------------------------------------------*/
 
+#include <iostream>
+
 // Reyes includes
 #include "boundbox3.h"
 #include "useful.h"
@@ -130,7 +132,7 @@ BoundBox3 operator*(Matrix4 transform,BoundBox3 box)
 //========STREAM INPUT/OUTPUT============
 //=======================================
 
-ostream &operator<<(ostream &io,const BoundBox3 &bbox)
+std::ostream &operator<<(std::ostream &io,const BoundBox3 &bbox)
 {
   io << "[" << bbox.min << " to " << bbox.max << "]";
   return io;

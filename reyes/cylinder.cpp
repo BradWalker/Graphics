@@ -34,6 +34,9 @@
  *
  *-----------------------------------------------------*/
 
+#include <list>
+#include <iostream>
+
 // C includes
 #include <math.h>
 
@@ -64,7 +67,7 @@ Cylinder::Cylinder(float radius,float depth,float height,float arcmin,float arcm
 //========STREAM INPUT/OUTPUT============
 //=======================================
 
-ostream &operator<<(ostream &io,const Cylinder &c)
+std::ostream &operator<<(std::ostream &io,const Cylinder &c)
 {
   io << "Cylinder " << c.radius << " " << c.depth << " " << c.height << "\n";
   return io;
@@ -72,7 +75,7 @@ ostream &operator<<(ostream &io,const Cylinder &c)
 
 void Cylinder::Dump()
 {
-  cout << "Cylinder " << radius << " " << depth << " " << height << " " << arcmin << " " << arcmax << "\n";
+  std::cout << "Cylinder " << radius << " " << depth << " " << height << " " << arcmin << " " << arcmax << "\n";
 }
 
 //=======================================
@@ -121,7 +124,7 @@ bool Cylinder::Splitable()
 //=======================================
 // Split
 //---------------------------------------
-void Cylinder::Split(list<Primitive*> &primlist)
+void Cylinder::Split(std::list<Primitive*> &primlist)
 {
   float zcent=0.5*(height+depth);
   float arccent=0.5*(arcmax+arcmin);

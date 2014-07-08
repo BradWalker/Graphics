@@ -11,7 +11,8 @@
 # Main rules                         #
 ######################################
 
-reyes_dir = $(HOME)/src/reyes
+# reyes_dir = $(HOME)/src/reyes
+reyes_dir = ../
 
 LIBS = -I$(reyes_dir) -I$(reyes_dir)/light_shaders -I$(reyes_dir)/surface_shaders -I$(reyes_dir)/displacement_shaders
 

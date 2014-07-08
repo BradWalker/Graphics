@@ -48,7 +48,7 @@ class Cone: public Primitive
     void DoDice(MicroGrid &microgrid,int us,int vs);
 
     bool Splitable();
-    void Split(list<Primitive*> &primlist);
+    void Split(std::list<Primitive*> &primlist);
 
     bool EyeBound(BoundBox3 &bb);
 

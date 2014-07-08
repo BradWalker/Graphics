@@ -19,6 +19,8 @@
  *
  *-----------------------------------------------------*/
 
+#include <iostream>
+
 // C includes
 #include <math.h>
 
@@ -148,14 +150,14 @@ Colour Spotlight::Specular(Point3 P,Vector3 N,float shinyness)
 //---------------------------------------
 void Spotlight::Dump()
 {
-  cout << *this;
+  std::cout << *this;
 }
 
 //=======================================
 //========STREAM INPUT/OUTPUT============
 //=======================================
 
-ostream &operator<<(ostream &io,const Spotlight &l)
+std::ostream &operator<<(std::ostream &io,const Spotlight &l)
 {
-  cout << "from: " << l.from << " to:" << l.to << " Colour: " << l.colour << " Inten.: " << l.intensity;
+  std::cout << "from: " << l.from << " to:" << l.to << " Colour: " << l.colour << " Inten.: " << l.intensity;
 }

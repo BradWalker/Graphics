@@ -57,7 +57,7 @@ class Sphere: public Primitive
     bool TransformToEyeSpace(Matrix4 t_position,Matrix4 t_vector);
 
     bool Splitable();
-    void Split(list<Primitive*> &primlist);
+    void Split(std::list<Primitive*> &primlist);
 
     void DoDice(MicroGrid &microgrid,int us,int vs);
 

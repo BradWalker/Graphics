@@ -19,6 +19,8 @@
  *
  *-----------------------------------------------------*/
 
+#include <iostream>
+
 // C includes
 #include <math.h>
 
@@ -94,16 +96,16 @@ Colour Distantlight::Specular(Point3 P,Vector3 N,float shinyness)
 //---------------------------------------
 void Distantlight::Dump()
 {
-  cout << *this;
+  std::cout << *this;
 }
 
 //=======================================
 //========STREAM INPUT/OUTPUT============
 //=======================================
 
-ostream &operator<<(ostream &io,const Distantlight &l)
+std::ostream &operator<<(std::ostream &io,const Distantlight &l)
 {
-  cout << "Dir: " << l.L << " Colour: " << l.colour << " Inten.: " << l.intensity;
+  std::cout << "Dir: " << l.L << " Colour: " << l.colour << " Inten.: " << l.intensity;
 }
 
 

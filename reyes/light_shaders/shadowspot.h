@@ -15,6 +15,8 @@
  *
  *-----------------------------------------------------*/
 
+#include <iostream>
+
 // Reyes includes
 #include "light.h"
 
@@ -31,7 +33,7 @@ class Shadowspot: public Light
     void Dump();
     void loadDepthMap(char *filename);
 
-    friend ostream &operator<<(ostream &io,const Shadowspot &l);
+    friend std::ostream &operator<<(std::ostream &io,const Shadowspot &l);
 
   private:
     float LocalIntensity(Point3 p);

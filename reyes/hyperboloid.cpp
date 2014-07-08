@@ -13,6 +13,9 @@
  *
  *-----------------------------------------------------*/
 
+#include <iostream>
+#include <list>
+
 // C includes
 #include <math.h>
 
@@ -42,7 +45,7 @@ Hyperboloid::Hyperboloid(Point3 point1,Point3 point2,float thetamin,float thetam
 //========STREAM INPUT/OUTPUT============
 //=======================================
 
-ostream &operator<<(ostream &io,const Hyperboloid &s)
+std::ostream &operator<<(std::ostream &io,const Hyperboloid &s)
 {
   io << "Hyperboloid " << s.point1 << " " << s.point2 << " " << s.thetamin << "-" << s.thetamax << "\n";
   return io;
@@ -50,7 +53,7 @@ ostream &operator<<(ostream &io,const Hyperboloid &s)
 
 void Hyperboloid::Dump()
 {
-  cout << *this;
+  std::cout << *this;
 }
 
 //=======================================
@@ -106,7 +109,7 @@ bool Hyperboloid::Splitable()
 //=======================================
 // Split
 //---------------------------------------
-void Hyperboloid::Split(list<Primitive*> &primlist)
+void Hyperboloid::Split(std::list<Primitive*> &primlist)
 {
   Point3 pcent=(point1+point2)/2;
   float thetacent=(thetamin+thetamax)/2;

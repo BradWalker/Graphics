@@ -15,10 +15,10 @@
 #ifndef threads_h
 #define threads_h
 
-#include <iostream>
-
 // C includes
 #include <math.h>
+
+#include <iostream>
 
 // Reyes includes
 #include "colour.h"
@@ -47,7 +47,9 @@ class Threads: public Displacement
                 float s,float t, // Displacement texture co-ordinates
                 Vector3 N)       // Surface normal
       {float magnitude;
-       magnitude=(sin(M_PI*2*(t*frequency+s+phase))+offset)*Km;
+       // FIXME - why won't M_PI work..
+       // magnitude=(sin(M_PI*2*(t*frequency+s+phase))+offset)*Km;
+       magnitude=(sin(3.141592653589793238463 * 2 * (t * frequency + s + phase)) + offset) * Km;
        if (t>(1-dampzone))
 	 magnitude*=(1-t)/dampzone;
        else if (t<dampzone)

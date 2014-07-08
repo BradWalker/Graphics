@@ -20,6 +20,7 @@
 #include <math.h>
 
 // C++ includes
+#include <iostream>
 
 // Reyes includes
 #include "framebuffer.h"
@@ -62,7 +63,7 @@ FrameBuffer::FrameBuffer(int width,int height,RtDisplayMode mode)
   }
   data=(char*)calloc(pixelSize*width*height,1);
   if (data==NULL)
-    {cout << "No room for " << width << " x " << height << " pixels\n"; exit(EXIT_FAILURE);}
+    {std::cout << "No room for " << width << " x " << height << " pixels\n"; exit(EXIT_FAILURE);}
   used=0;
   free=width*height;
 }

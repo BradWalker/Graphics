@@ -16,6 +16,9 @@
  *
  *-----------------------------------------------------*/
 
+#include <list>
+#include <iostream>
+
 // C includes
 #include <math.h>
 
@@ -45,16 +48,16 @@ Cone::Cone(float height,float radius,float thetamin,float thetamax,float zmin,fl
 //========STREAM INPUT/OUTPUT============
 //=======================================
 
-ostream &operator<<(ostream &io,const Cone &d)
+std::ostream &operator<<(std::ostream &io, const Cone &d)
 {
-  io.setf(ios::showpoint+ios::right+ios::fixed);
+  io.setf(std::ios::showpoint | std::ios::right | std::ios::fixed);
   io << "Cone " << d.height << " " << d.radius << " " << d.thetamin << "-" << d.thetamax << " " << d.zmin << "-" << d.zmax << "\n";
   return io;
 }
 
 void Cone::Dump()
 {
-  cout << *this;
+  std::cout << *this;
 }
 
 //=======================================
@@ -100,7 +103,7 @@ bool Cone::Splitable()
 //=======================================
 // Split
 //---------------------------------------
-void Cone::Split(list<Primitive*> &primlist)
+void Cone::Split(std::list<Primitive*> &primlist)
 {
   float zmid=0.5*(zmin+zmax);
   float thetacent=0.5*(thetamin+thetamax);

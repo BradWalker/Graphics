@@ -1,3 +1,5 @@
+#ifndef paramlist_h
+#define paramlist_h
 /*------------------------------------------------------
  * TITLE:  paramlist.h
  * AUTHOR: Adrian Skilling
@@ -12,18 +14,17 @@
  * Initial revision
  *
  *-----------------------------------------------------*/
-#ifndef paramlist_h
-#define paramlist_h
 
 // Reyes includes
 #include <list>
-#include <iterator>
 #include "parameter.h"
+// #include "iterator.h"
 
 class ParamList
 {
   public:
-    ParamList(){}
+    ParamList(){};
+
     bool Exists(const char *name);
 
     int Int(const char *name);

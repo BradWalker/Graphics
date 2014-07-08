@@ -19,16 +19,18 @@
  *
  *-----------------------------------------------------*/
 
+#include <list>
+
 // Reyes includes
 #include "paramlist.h"
 #include <list>
 #include <iterator>
 
-list<Parameter>::iterator Find(list<Parameter> &parameters,char *name,bool &found)
+std::list<Parameter>::iterator Find(std::list<Parameter> &parameters, const char *name,bool &found)
 {
-  int i=0;
+  unsigned int i=0;
   Parameter param;
-  list<Parameter>::iterator iter,iter_found;
+  std::list<Parameter>::iterator iter,iter_found;
 
   found=false;
   iter=parameters.begin();
@@ -36,7 +38,7 @@ list<Parameter>::iterator Find(list<Parameter> &parameters,char *name,bool &foun
   {
     param=*iter;
     if ((param.type==PARAMTYPE_STRING)&&
-        (!strcmp(param.data.string,name)))
+        (!strcmp(param.data.string, name)))
     {
       found=true;
       iter_found=iter;
@@ -46,16 +48,16 @@ list<Parameter>::iterator Find(list<Parameter> &parameters,char *name,bool &foun
   return iter_found;
 }
 
-bool ParamList::Exists(char *name)
+bool ParamList::Exists(const char *name)
 {
   bool found;
   Find(parameters,name,found);
   return found;
 }
 
-float ParamList::Float(char *name)
+float ParamList::Float(const char *name)
 {
-  list<Parameter>::iterator iter;
+  std::list<Parameter>::iterator iter;
   bool found;
 
   iter=Find(parameters,name,found);
@@ -68,9 +70,9 @@ float ParamList::Float(char *name)
     return 0;
 }
 
-int ParamList::Int(char *name)
+int ParamList::Int(const char *name)
 {
-  list<Parameter>::iterator iter;
+  std::list<Parameter>::iterator iter;
   bool found;
 
   iter=Find(parameters,name,found);
@@ -83,9 +85,9 @@ int ParamList::Int(char *name)
     return 0;
 }
 
-char* ParamList::String(char *name)
+char* ParamList::String(const char *name)
 {
-  list<Parameter>::iterator iter;
+  std::list<Parameter>::iterator iter;
   bool found;
 
   iter=Find(parameters,name,found);
@@ -98,9 +100,9 @@ char* ParamList::String(char *name)
     return 0;
 }
 
-Vector3 ParamList::Vector(char *name)
+Vector3 ParamList::Vector(const char *name)
 {
-  list<Parameter>::iterator iter;
+  std::list<Parameter>::iterator iter;
   bool found;
 
   iter=Find(parameters,name,found);

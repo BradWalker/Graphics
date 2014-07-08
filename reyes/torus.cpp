@@ -13,6 +13,9 @@
  *
  *-----------------------------------------------------*/
 
+#include <iostream>
+#include <list>
+
 // C includes
 #include <math.h>
 
@@ -42,7 +45,7 @@ Torus::Torus(float major_radius,float minor_radius,float phimin,float phimax,flo
 //========STREAM INPUT/OUTPUT============
 //=======================================
 
-ostream &operator<<(ostream &io,const Torus &s)
+std::ostream &operator<<(std::ostream &io,const Torus &s)
 {
   io << "Torus " << s.major_radius << " " << s.minor_radius << " " << s.phimin << " " << s.phimax << " [" << s.arcmin << ":" << s.arcmax << "]\n";
   return io;
@@ -90,7 +93,7 @@ bool Torus::Splitable()
 //=======================================
 // Split
 //---------------------------------------
-void Torus::Split(list<Primitive*> &primlist)
+void Torus::Split(std::list<Primitive*> &primlist)
 {
   float phicent=(phimin+phimax)/2;
   float arccent=(arcmin+arcmax)/2;

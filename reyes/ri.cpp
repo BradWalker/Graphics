@@ -43,11 +43,11 @@
 /*----------------------------------------------------*/
 GlobalState RiGlobal;
 CurrentState RiCurrent;
-list<CurrentState> RiCurrentStack;
-list<GlobalState> RiGlobalStack;
-list<Matrix4> RiTransformStack;
-list<Light*> lights;
-list<Light*> arealights;
+std::list<CurrentState> RiCurrentStack;
+std::list<GlobalState> RiGlobalStack;
+std::list<Matrix4> RiTransformStack;
+std::list<Light*> lights;
+std::list<Light*> arealights;
 
 /* Shader accessable variables */
 Point3 wP; // current point in world coords

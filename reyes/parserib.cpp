@@ -2338,7 +2338,7 @@ void ParseRIB(char *filename)
   if (fp_rib)
   {
 #ifdef YYDEBUG
-    yydebug=1;
+    // yydebug=1;
 #endif
     RiBegin("");
     success=yyparse();
